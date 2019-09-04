@@ -54,3 +54,17 @@ censys.io
 *.hugedomains.com
 *.nic.ir
 *.censys.io
+cutestat.com
+*.cutestat.com
+domain-status.com
+*.domain-status.com
+*.ipaddress.com
+ipaddress.com
+websiteoutlook.com
+*.websiteoutlook.com
+*.clearwebstats.com
+clearwebstats.com
+accessify.com
+*.accessify.com
+wa-com.com
+*.wa-com.com
