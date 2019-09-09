@@ -7,6 +7,7 @@ tcex.tcex_args.config_file('app_config.json')
 args = tcex.args
 
 org = "Org owner"
+
 group_type = "Adversary"
 
 email = input("Enter email to get domains from DomainBigData: ").strip()
@@ -20,7 +21,10 @@ data = d.intelligence
 #print(data)
 #print(d.intelligence_list)
 
-email_adversary_name = "%s - %s" % (data['registrant_name'], email)
+registrant_name = data.get('registrant_name', '')
+registrant_org = data.get('registrant_org', '')
+
+email_adversary_name = "%s , %s - %s" % (registrant_name, registrant_org, email)
 source = "https://domainbigdata.com/email/" + email
 
 if len(data['associated_domains']) > 0:
@@ -33,9 +37,9 @@ if len(data['associated_domains']) > 0:
     print(group['data']['adversary']['webLink'])
 
     for d in data['associated_domains']:
-        domain = d.get('domain')
-        created_date = d.get('creation_date')
-        registrar = d.get('registrar')
+        domain = d.get('domain', '')
+        created_date = d.get('creation_date', '')
+        registrar = d.get('registrar', '')
 
         # create domain indicator in TC, associated to incident
         ti = tcex.ti.indicator(indicator_type='Host', owner=org, hostname=domain, dns_active=True, whois_active=True)
@@ -53,6 +57,6 @@ if len(data['associated_domains']) > 0:
 
         domain_reg_attribute = "Registrar: %s\nCreated Date: %s\n" % (registrar, created_date)
         response = ti.add_attribute(attribute_type='Additional Analysis and Context', attribute_value=domain_reg_attribute)
-        
+
         print(domain)
         #print(d)
