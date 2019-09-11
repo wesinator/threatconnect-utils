@@ -1,5 +1,6 @@
 from domainbigdata import DomainBigData
 from tcex import TcEx
+import webbrowser
 
 tcex = TcEx()
 #tcex.inputs.config_file('app_config.json') # tcex >= 1.1.3
@@ -34,7 +35,6 @@ if len(data['associated_domains']) > 0:
 
     group = response.json()
     group_id = group['data']['adversary']['id']
-    print(group['data']['adversary']['webLink'])
 
     for d in data['associated_domains']:
         domain = d.get('domain', '')
@@ -60,3 +60,7 @@ if len(data['associated_domains']) > 0:
 
         print(domain)
         #print(d)
+
+    link = group['data']['adversary']['webLink']
+    print(link)
+    webbrowser.open(link)
