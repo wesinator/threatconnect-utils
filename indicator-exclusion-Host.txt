@@ -68,3 +68,6 @@ accessify.com
 *.accessify.com
 wa-com.com
 *.wa-com.com
+vxcube.com
+*.vxcube.com
+localhost.localdomain
