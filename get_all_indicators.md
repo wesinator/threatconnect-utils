@@ -21,7 +21,10 @@ parameters = {'includes': ['additional', 'attributes', 'labels', 'tags']}
 group = ti.group(group_type=group_type, owner=owner, unique_id=inc_id)
 
 # filters for both active or inactive status indicators
-all_indicator_params = {"includeAdditional": "true", "active": "false", "filters": "active=true,active=false", "orParams": "true"}
+all_indicator_params = {"includeAdditional": "true", 
+                        "active": "false", 
+                        "filters": "active=true,active=false", 
+                        "orParams": "true"}
 
 c = 0
 for indicator in dom_group.indicator_associations(params=all_indicator_params):
