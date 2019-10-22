@@ -1,5 +1,18 @@
 ### Get all associated indicators regardless of status:
 
+https://github.com/ThreatConnect-Inc/threatconnect-developer-docs/blob/1ae8a1c76078177a551860ada3aac88af124b47f/docs/rest_api/indicators/filters.rst
+
+`GET /v2/indicators?filters=active%3Dtrue,active%3Dfalse&orParams=true`
+
+##### parameter struct:
+```json
+{
+    "includeAdditional": "true", 
+    "filters": "active=true,active=false", 
+    "orParams": "true"
+}
+```
+
 #### TcEx (v1.0.6):
 ```python
 #!/usr/bin/env python3
