@@ -71,3 +71,13 @@ wa-com.com
 vxcube.com
 *.vxcube.com
 localhost.localdomain
+eranet.com
+*.eranet.com
+tnet.hk
+*.tnet.hk
+todaynic.com
+*.todaynic.com
+todaynic.biz
+*.todaynic.biz
+now.cn
+*.now.cn
