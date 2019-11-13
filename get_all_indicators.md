@@ -39,7 +39,7 @@ all_indicator_params = {"includeAdditional": "true",
                         "orParams": "true"}
 
 c = 0
-for indicator in dom_group.indicator_associations(params=all_indicator_params):
+for indicator in group.indicator_associations(params=all_indicator_params):
     print(indicator['webLink'])
     c += 1
 
