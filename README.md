@@ -1,2 +1,2 @@
 # threatconnect-utils
-Script utilities and configs for analysis in ThreatConnect
+Script utilities, programming snippets, and configs for using the ThreatConnect API and analysis.
