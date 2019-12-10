@@ -4,13 +4,25 @@ https://github.com/ThreatConnect-Inc/threatconnect-developer-docs/blob/1ae8a1c76
 
 `GET /v2/indicators?filters=active%3Dtrue,active%3Dfalse&orParams=true`
 
-##### parameter struct:
+#### parameter struct:
 ```json
 {
     "includeAdditional": "true", 
     "filters": "active=true,active=false", 
     "orParams": "true"
 }
+```
+
+#### TC-JS
+```javascript
+/*
+ * filter on active + inactive indicators
+ * https://docs.threatconnect.com/en/latest/javascript/javascript_sdk.html#filters
+*/
+indicatorStatusFilter = new Filter(FILTER.OR);
+indicatorStatusFilter.on('active', FILTER.EQ, 'true');
+indicatorStatusFilter.on('active', FILTER.EQ, 'false');
+
 ```
 
 #### TcEx (v1.0.6):
