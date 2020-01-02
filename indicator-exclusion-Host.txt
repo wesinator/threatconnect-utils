@@ -87,3 +87,14 @@ vboxsvr.ovh.net
 vimeo.com
 *.vimeo.com
 *.vimeocdn.com
+linkedin.com
+*.linkedin.com
+*.licdn.com
+*.fidelity.com
+fidelity.com
+squarespace.com
+*.squarespace.com
+*.wix.com
+*.wixstatic.com
+wix.com
+wixstatic.com
