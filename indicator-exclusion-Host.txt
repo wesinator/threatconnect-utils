@@ -84,3 +84,6 @@ now.cn
 riskiq.com
 *.riskiq.com
 vboxsvr.ovh.net
+vimeo.com
+*.vimeo.com
+*.vimeocdn.com
