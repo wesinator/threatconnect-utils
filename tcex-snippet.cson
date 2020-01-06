@@ -21,9 +21,9 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 '.source.python':
-  'TcEx Init':
-    'prefix': 'tcex-init'
-    'body': '''
+    'TcEx Init':
+      'prefix': 'tcex-init'
+      'body': '''
   import tcex
 
 
@@ -45,4 +45,4 @@
 
       return tc
 
-    '''
+      '''
