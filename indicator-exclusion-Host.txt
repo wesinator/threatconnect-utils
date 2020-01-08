@@ -98,3 +98,9 @@ squarespace.com
 *.wixstatic.com
 wix.com
 wixstatic.com
+netim.com
+uniregistry.com
+*.rebel.com
+realtimeregister.com
+rebel.com
+launchpad.com
