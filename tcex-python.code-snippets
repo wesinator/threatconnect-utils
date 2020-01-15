@@ -40,17 +40,17 @@
             "        if isinstance(attribute_content, list):",
             "            for attribute in attribute_content:",
             "                try:",
-            "                    ti.add_attribute(attribute_type=attribute_type, attribute_value=attribute)",
+            "                    ti_object.add_attribute(attribute_type=attribute_type, attribute_value=attribute)",
             "                except TypeError as e:",
             "                    print(e)",
             "",
             "        elif attribute_content != '':",
             "            try:",
-            "                ti.add_attribute(attribute_type=attribute_type, attribute_value=attribute_content)",
+            "                ti_object.add_attribute(attribute_type=attribute_type, attribute_value=attribute_content)",
             "            except TypeError as e:",
             "                print(e)",
             ""
         ],
         "description": "tcex function to add attributes to TI item"
-    },
+    }
 }
