@@ -25,5 +25,32 @@
             ""
         ],
         "description": "Init function for TcEx module"
-    }
+    },
+    "tcex addAttributes": {
+        "prefix": "tcex-addattributes",
+        "body": [
+            "# given ti object, attribute dict (with list for multiple of same type)",
+            "# add attributes on the TC item",
+            "def addAttributes(ti_object, attributes):",
+            "    # add any additional attributes",
+            "    for attribute_type in attributes:",
+            "        attribute_content = attributes[attribute_type]",
+            "",
+            "        # if multiple attributes of type, add each one",
+            "        if isinstance(attribute_content, list):",
+            "            for attribute in attribute_content:",
+            "                try:",
+            "                    ti.add_attribute(attribute_type=attribute_type, attribute_value=attribute)",
+            "                except TypeError as e:",
+            "                    print(e)",
+            "",
+            "        elif attribute_content != '':",
+            "            try:",
+            "                ti.add_attribute(attribute_type=attribute_type, attribute_value=attribute_content)",
+            "            except TypeError as e:",
+            "                print(e)",
+            ""
+        ],
+        "description": "tcex function to add attributes to TI item"
+    },
 }
