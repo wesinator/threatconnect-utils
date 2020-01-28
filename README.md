@@ -6,6 +6,7 @@ Script utilities, programming snippets, and configs for using the ThreatConnect 
 Solving intel, implementation, and data quality problems commonly encountered in ThreatConnect data.
 TC documentation (as with many vendor documentation) does not provide many higher-level examples of how to use the API to solve actual TI, data quality problems.
 
+## TcEx
 
 ### Inconsistencies in TcEx API interface
 
@@ -29,3 +30,13 @@ Some inconsistencies in the [TcEx](https://github.com/ThreatConnect-Inc/tcex) py
     
     the keyword arg should be consistent
 
+### Error handling
+Handle potential network exception on retrieving items with `.many()`:
+```python
+    try:
+        for group in groups.many(params=parameters):
+            #print(group)
+            # Do stuff here
+    except Exception as e:
+        print("Error retrieving from TC API: ", repr(e))
+```
