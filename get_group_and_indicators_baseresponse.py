@@ -53,6 +53,8 @@ def get_group_indicators(group_type, group_id, owner):
                 "orParams": "true"
             }
             
+            # need to re-get specific group object by id to be able to get indicator associations
+            tc_group = ti.group(group_type=group_type, owner=owner, unique_id=group_id)
             # indicator_associations is called on initial groups object
             for indicator in tc_group.indicator_associations(params=all_indicator_params):
                 print(indicator)
