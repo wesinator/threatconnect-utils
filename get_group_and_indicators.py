@@ -20,6 +20,8 @@ def get_group_indicators(group_type, group_id, owner):
         "filters": "active=true,active=false", 
         "orParams": "true"
     }
+    
+    # indicator_associations is called on initial groups object
     for indicator in tc_group.indicator_associations(params=all_indicator_params):
         print(indicator)
         '''i = ti.indicator(
