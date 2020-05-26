@@ -4,7 +4,7 @@ Script utilities, programming snippets, and configs for using the ThreatConnect 
 ## Impetus
 
 Solving intel, implementation, and data quality problems commonly encountered in ThreatConnect data.
-TC documentation (as with many vendor documentation) does not provide many higher-level examples of how to use the API to solve actual TI, data quality problems.
+TC documentation (as with many vendor documentation) does not necessarily provide many higher-level examples of how to use the API to solve actual TI, data quality problems.
 
 ## TcEx
 
@@ -14,7 +14,7 @@ Some inconsistencies in the [TcEx](https://github.com/ThreatConnect-Inc/tcex) py
 
 #### [TI module](https://threatconnect-inc.github.io/tcex/module_ti.html):
   ##### Item data access
-  - items `.many()` returns accesible data object
+  - items `.many()` returns a more generic, accessible data object
   
   - `.single()` for getting a specific indicator or group returns a response object that has to be accessed by one of the following python `requests` object properties:
     - `response.text`
@@ -38,4 +38,14 @@ Handle potential network exception on retrieving items with `.many()`:
             # Do stuff here
     except Exception as e:
         print("Error retrieving from TC API: ", repr(e))
+```
+
+#
+
+```python
+# handle connection timeout, conn errors from requests module
+    try:
+        response = ti.create()
+    except requests.exceptions.ConnectionError as e:
+        print("Error creating object in TC:", e)
 ```
