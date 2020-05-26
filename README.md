@@ -12,7 +12,7 @@ TC documentation (as with many vendor documentation) does not necessarily provid
 
 Some inconsistencies in the [TcEx](https://github.com/ThreatConnect-Inc/tcex) python API interface that I aim to address or at least document in this project:
 
-#### [TI module](https://threatconnect-inc.github.io/tcex/module_ti.html):
+#### [TI module](https://threatconnect-inc.github.io/tcex/module_threat_intelligence.html):
   ##### Item data access
   - items `.many()` returns a more generic, accessible data object
   
@@ -21,7 +21,7 @@ Some inconsistencies in the [TcEx](https://github.com/ThreatConnect-Inc/tcex) py
     - `response.json()`
 
   ##### Indicator access
-  - Specific indicators can be accessed either by `ti.indicator(` with a [unique_id](https://threatconnect-inc.github.io/tcex/module_ti.html?highlight=json#get-indicator-by-value)
+  - Specific indicators can be accessed either by `ti.indicator(` with a [unique_id](https://threatconnect-inc.github.io/tcex/module_threat_intelligence.html#get-indicator-by-value)
   
     or 
     
