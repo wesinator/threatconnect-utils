@@ -54,10 +54,10 @@ Handle potential network exception on retrieving items with `.many()`:
 ```python
     # handle stupid tcex 2.0.x keyword arg change
     # https://github.com/ThreatConnect-Inc/tcex/issues/122
-    if tcex.__version__.startswith("2.0"):
-        ti = tc.ti.indicator(indicator_type='URL', owner=owner, text=indicator) # , confidence=confidence, rating=threat_rating)
-    else:
+    if tcex.__version__ < "2.0":
         ti = tc.ti.indicator(indicator_type='URL', owner=owner, url=indicator) # , confidence=confidence, rating=threat_rating)
+    else:
+        ti = tc.ti.indicator(indicator_type='URL', owner=owner, text=indicator) # , confidence=confidence, rating=threat_rating)
 
     try:
         response = ti.create()
