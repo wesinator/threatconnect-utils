@@ -8,7 +8,7 @@ This object structure has the following primary fields:
  - `type`: the TC indicator type
  - `summary`: the indicator 'value'
 
-#### 
+#### Getting a single indicator flat object structure
 ```python
 import tcex
 
